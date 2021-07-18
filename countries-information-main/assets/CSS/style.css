@@ -1,0 +1,155 @@
+@font-face {
+    font-family: "IranSans";
+    src: url("../fonts/IRANSans_Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: dana;
+    src: url("../fonts/dana-regula.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: leyla;
+    src: url("../fonts/leyla.ttf") format("truetype");
+}
+
+:root {
+    --background-color: #bbb3dd;
+    --card-color: #FFD6A5;
+}
+
+/* GLOBAL */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    background-color: var(--background-color);
+}
+
+* {
+    font-family: "IranSans";
+}
+
+#flag-thumbnail {
+    max-width: 10rem;
+    min-height: 10rem;
+    border-radius: 50%;
+}
+
+/* MAIN PAGE STYLES */
+/* Title textes */
+.title h2 {
+    font-size: 3rem;
+}
+
+.title h4 {
+    font-size: 2rem;
+}
+
+/* CARD-BODY */
+.card-text {
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: color .5s ease;
+}
+
+a:hover {
+    color: #FFADAD;
+}
+
+.card {
+    background-color: #6e64a7;
+}
+
+/* ALL COUNTRIES STYLES */
+#allcountries-body,
+#customCountry-body {
+    background-color: transparent !important;
+}
+
+#header {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: transparent !important;
+}
+
+#header::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: url('../images/World-map-countries-flags.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: brightness(50%);
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#main {
+    height: 100vh;
+    width: 100%;
+}
+
+.accordion,
+.accordion-button {
+    font-size: 3rem;
+}
+
+.accordion-button::after {
+    width: 3rem !important;
+    height: 3rem !important;
+    margin: 0 auto 0 0 !important;
+    background-size: 3rem !important;
+}
+
+.accordion {
+    background-color: #fff;
+}
+
+.countries-main {
+    background-color: #fff;
+    border-radius: 1rem;
+}
+
+#map {
+    width: 100%;
+    height: 30rem;
+}
+
+/* CUSTOM COUNTRY STYLES */
+#customCountry-header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#customCountry-header::after {
+    background-image: url('../images/World-map-countries-flags.jpg');
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+#countries {
+    font-size: 2rem;
+    border-radius: .4rem;
+    padding: .4rem 1rem;
+    outline: none;
+}
